@@ -85,8 +85,6 @@ const Login = () => {
         "http://localhost:5000/signup",
         newUser
       );
-
-      // Handle the response, e.g., show success message, redirect, etc.
       console.log("Signup successful:", response.data);
       alert("Signup Successfully");
       refreshFormSignup();
