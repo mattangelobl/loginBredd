@@ -57,7 +57,11 @@ const Login = () => {
       alert("Login successful!");
       refreshFormSignin();
     } catch (error) {
-      console.error("Error during login:", error.response.data);
+      if (error.response && error.response.data) {
+        console.error("Error during login:", error.response.data);
+      } else {
+        console.error("Error during login:", error);
+      }
 
       alert("Login failed. Please check your credentials.");
       refreshFormSignin();
